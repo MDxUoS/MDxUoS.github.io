@@ -1,0 +1,73 @@
+@charset "utf-8";
+body {
+    font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif;
+    color: #282A50;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    background-color: #A8C1F1;
+    background-repeat: repeat;
+}
+#container   {
+    background-color: #CEDDFB;
+    width: 100%;
+    min-width: 740px;
+    max-width: 1000px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: auto;
+    margin-left: auto;
+}
+h1, h3 {
+    font-style: normal;
+    font-weight: 600;
+    color: #272F44;
+}
+#navigation ul {
+    list-style-type: none;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+}
+h1 {
+    font-size: 48px;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+#navigation ul li {
+    float: left;
+    width: 20%;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+}
+#navigation ul li a {
+    display: block;
+    background-color: #28295E;
+    color: #91C3F7;
+    text-decoration: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+#navigation ul li a:hover {
+    background-color: #61518C;
+    text-decoration: none;
+}
+#main content h3, p {
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+#main content img {
+    border-radius: 100px;
+}

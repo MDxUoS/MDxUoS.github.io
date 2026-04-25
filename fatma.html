@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fatma Alzaabi | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <a href="#about" class="skip-link">Skip to main content</a>
+
+    <div class="accessibility-controls">
+        <button id="tts-button" aria-label="Read content out loud">
+            <span id="speaker-icon">🔊</span> Read Portfolio
+        </button>
+    </div>
+
+    <nav class="navbar">
+        <div class="logo">FA.</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li> 
+            <li><a href="#about">About</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div id="read-area">
+        <main>
+            <section id="home" class="hero">
+                <div class="hero-text">
+                    <h1>Fatma Alzaabi</h1>
+                    <p>Mass Communication and Media Production</p>
+                </div>
+                <div class="hero-image">
+                    <img src="drawings/personal pic.png" alt="Portrait of Fatma Alzaabi">
+                </div>
+            </section>
+
+            <section id="about" class="content-section">
+              <div class="about-container">
+                    <div class="about-text">
+                        <h2>About me</h2>
+                        <p>My name is <strong>Fatma Alzaabi</strong>, a 22-year-old media enthusiast based in <strong>Dubai</strong>. I am currently in my final year at the University of Sharjah, majoring in Mass Communication with a concentration in Media Production.</p>
+                        <p>Beyond the lens and the edit suite, I am a passionate gamer. Engaging with titles like <strong>Overwatch</strong> and <strong>Fortnite</strong> keeps my creative perspective fresh and serves as a vital way to recharge.</p>
+                        <p>My professional goal is to contribute to the <strong>Dubai Government</strong>, specifically within the <strong>Dubai Media Office</strong>. I look forward to absorbing every possible skill from this course to prepare for a career in professional news reporting and content documentation.</p>
+                    </div>
+                    
+                    <div class="about-video">
+                        <video controls playsinline width="640" height="360" preload="auto" aria-label="Fatma Alzaabi Self Introduction Video">
+                            <source src="drawings/self.mp4" type="video/mp4">
+                            <track kind="captions" src="captions.vtt" srclang="en" label="English">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+              </div>
+            </section>
+            
+            <section id="work" class="content-section">
+                <h2 class="section-title">My Artworks</h2>
+                <div class="gallery-container">
+                    <img src="drawings/drawing 1.jpg" class="gallery-item" alt="Portfolio Image One">
+                    <img src="drawings/drawing 2.jpg" class="gallery-item" alt="Portfolio Image Two">
+                    <img src="drawings/drawing 3.jpg" class="gallery-item" alt="Portfolio Image Three">
+                    <img src="drawings/drawing 4.jpg" class="gallery-item" alt="Portfolio Image Four">
+                    <img src="drawings/drawing 5.jpg" class="gallery-item" alt="Portfolio Image Five">
+                    <img src="drawings/drawing 6.jpg" class="gallery-item" alt="Portfolio Image Six">
+                </div>
+            </section>
+        </main>
+
+        <footer id="contact" class="footer-area">
+            <div class="footer-content">
+                <h3>Contact</h3>
+                <p>Email: U21106505@sharjah.ac.ae</p>
+                <p>Instagram: @fatma.alzaabiii</p>
+                
+                <hr class="footer-divider">
+
+                <div class="legal-notice">
+                    <p>&copy; 2026 Fatma Alzaabi. All Rights Reserved.</p>
+                    <p><small>All content presented on this website, including digital sketches, video production, and source code, are original works created by Fatma Alzaabi for academic purposes.</small></p>
+                </div>
+                
+                <p>University of Sharjah</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const ttsButton = document.getElementById('tts-button');
+        let speaking = false;
+        let utterance;
+
+        function speak() {
+            if (!speaking) {
+                let contentText = document.getElementById('read-area').innerText;
+                let slowText = contentText.replace("U21106505", "U 2 1 1 0 6 5 0 5");
+
+                utterance = new SpeechSynthesisUtterance(slowText);
+                const voices = window.speechSynthesis.getVoices();
+                const femaleVoice = voices.find(v => v.name.includes('Samantha') || v.name.includes('Zira') || v.name.includes('Female'));
+
+                if (femaleVoice) utterance.voice = femaleVoice;
+                utterance.pitch = 1.1; 
+                utterance.rate = 0.9;
+
+                utterance.onend = () => {
+                    speaking = false;
+                    ttsButton.innerHTML = "🔊 Read Portfolio";
+                };
+
+                window.speechSynthesis.speak(utterance);
+                speaking = true;
+                ttsButton.innerHTML = "🛑 Stop Reading";
+            } else {
+                window.speechSynthesis.cancel();
+                speaking = false;
+                ttsButton.innerHTML = "🔊 Read Portfolio";
+            }
+        }
+
+        ttsButton.addEventListener('click', speak);
+        window.speechSynthesis.onvoiceschanged = () => window.speechSynthesis.getVoices();
+    </script>
+
+</body>
+</html>

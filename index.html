@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Group Portfolio</title>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: #FAF9F6;
+            text-align: center;
+        }
+
+        header {
+            background-color: #e8e4dc;
+            padding: 30px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        p {
+            color: #555;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 30px;
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            width: 220px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .card h2 {
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .card a {
+            text-decoration: none;
+            background-color: #d6cfc7;
+            padding: 10px 15px;
+            border-radius: 8px;
+            color: black;
+            display: inline-block;
+        }
+
+        .card a:hover {
+            background-color: #c5bdb4;
+        }
+
+        footer {
+            margin-top: 40px;
+            background-color: #e8e4dc;
+            padding: 25px;
+            text-align: center;
+            color: #333;
+        }
+
+        footer h3 {
+            margin-bottom: 10px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            color: #444;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+<img src="uos.png" width="200">
+
+        <h1>Our Team Portfolio</h1>
+        <p>Click on a member to view their work</p>
+
+        <!-- 🔊 Text to Speech Button -->
+        <button onclick="readPage()">Read Page</button>
+    </header>
+
+    <div class="container">
+
+        <div class="card">
+            <img src="WhatsApp Image 2026-04-24 at 9.33.03 PM.jpeg">
+            <h2>Amna Bin Rasheed</h2>
+            <a href="amna.html" target="_blank">View Portfolio</a>
+        </div>
+
+        <div class="card">
+            <img src="drawings/personal pic.png">
+            <h2>Fatma Alzaabi</h2>
+            <a href="fatma.html" target="_blank">View Portfolio</a>
+        </div>
+
+        <div class="card">
+            <img src="Photo.jpg.jpeg">
+            <h2>Maram Dahmani</h2>
+            <a href="web maram.html" target="_blank">View Portfolio</a>
+        </div>
+
+        <div class="card">
+            <img src="MarwaPhoto.jpeg">
+            <h2>Marwa Alshamsi</h2>
+            <a href="Marwa Alshamsi - Protfolio.html" target="_blank">View Portfolio</a>
+        </div>
+
+        <div class="card">
+            <img src="WhatsApp Image 2026-04-23 at 2.43.05 PM-fotor-202604231502.png">
+            <h2>Ruaa Odeh</h2>
+            <a href="Ruaa's webpage.html" target="_blank">View Portfolio</a>
+        </div>
+
+    </div>
+
+    <footer>
+        <h3>Contact Us</h3>
+
+        <p>Amna: U23106809@sharjah.ac.ae</p>
+        <p>Fatma:  U21106505@sharjah.ac.ae</p>
+        <p>Maram: U25101781@sharjah.ac.ae</p>
+        <p>Marwa: U23100652@sharjah.ac.ae</p>
+        <p>Ruaa: U25105921@sharjah.ac.ae</p>
+
+        <br>
+
+        <p><strong>About this project:</strong></p>
+        <p>This group portfolio website was created to showcase each member’s personal work in web design and development.</p>
+
+        <br>
+
+        <p>© 2026 Group Portfolio Project</p>
+    </footer>
+
+    <!-- 🔊 JavaScript for Text to Speech -->
+    <script>
+        function readPage() {
+            const text = document.body.innerText;
+            const speech = new SpeechSynthesisUtterance(text);
+            speech.lang = "en-US";
+            window.speechSynthesis.speak(speech);
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Amna Bin Rasheed | Portfolio</title>
+    <style>
+    @import url("intro.pm4.css");
+
+        /* The main background color - Very Light Beige */
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            margin: 0; 
+            background-color: #FAF9F6; 
+            color: #4A4A4A; 
+        }
+
+        /* Navigation Bar */
+        nav { 
+            background: #ffffff; 
+            padding: 25px 8%; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03); 
+        }
+        .nav-links { list-style: none; display: flex; gap: 30px; margin: 0; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; }
+
+        /* Hero Section */
+        .hero { 
+            padding: 100px 10% 140px 10%; 
+            background-color: #FAF9F6; 
+            text-align: left; 
+        }
+        .hero h3 { color: #BDB76B; font-weight: 400; margin-bottom: 5px; }
+        .hero h1 { font-size: 3.8rem; margin: 0; color: #2D2D2D; }
+        .hero p { font-size: 1.2rem; color: #777; margin-top: 10px; }
+
+        /* About Card - Light Pink Accent */
+        .about-card { 
+            background: #ffffff; 
+            margin: -100px 10% 50px 10%; 
+            padding: 60px; 
+            border-radius: 40px; 
+            display: flex; 
+            gap: 50px; 
+            box-shadow: 0 20px 40px rgba(0,0,0,0.04); 
+            align-items: center;
+            border: 1px solid #FFF0F5; 
+        }
+        .about-content { flex: 1.5; }
+        .about-content h2 { color: #DB7093; margin-top: 0; } 
+        
+        /* Video Area */
+        .about-video { 
+            flex: 1; 
+            background: #FFF0F5; 
+            border-radius: 30px; 
+            min-height: 300px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            overflow: hidden;
+        }
+
+        /* Gallery Section */
+        .gallery { padding: 80px 10%; text-align: center; }
+        .gallery-grid { display: flex; gap: 25px; margin-top: 40px; }
+        .gallery-item { 
+            flex: 1; 
+            background: white; 
+            padding: 20px; 
+            border-radius: 25px; 
+            box-shadow: 0 10px 20px rgba(0,0,0,0.03); 
+        }
+        .gallery-item img { 
+            width: 100%; 
+            height: 250px; 
+            border-radius: 15px; 
+            object-fit: cover; 
+            background: #FAF9F6;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div style="font-weight: bold; font-size: 1.3rem; color: #2D2D2D;">Amna Bin Rasheed | Portfolio</div>
+        <ul class="nav-links">
+            <li>Home</li>
+            <li>About</li>
+            <li>Baking & Cooking</li>
+           
+        
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <h3>Hello</h3>
+        <h1>I'm Amna</h1>
+        <p>IT Multimedia Student & Culinary Enthusiast</p>
+    </section>
+
+    <section class="about-card">
+        <div class="about-content">
+			<button onclick="readBio()" style="background:#DB7093; color:white; border:none; padding:10px 20px; border-radius:20px; cursor:pointer; margin-bottom:15px; font-weight:bold;">
+    🔊 Click to Listen
+</button>
+			
+            <h2>About me</h2>
+            <p id="bio-text">I am Amna, a student majoring in IT Multimedia at the University of Sharjah. I am passionate about fitness, cooking, and baking, and I enjoy how each of them combines creativity, discipline, and consistency in different ways. Fitness helps me stay active and focused, while cooking and baking allow me to experiment, create, and enjoy the process of making something from scratch.</p>
+        </div>
+        <div class="about-video">
+			<video controls width= "100%" style="border-radius: 20px;">
+		<source src="Amna portfolio/video/intro.mp4"></video> 
+	
+    </video>
+</div>
+    </section>
+
+    <section class="gallery">
+        <h2 style="color: #DB7093;">My Culinary Gallery</h2>
+        <div class="gallery-grid">
+            
+            <div class="gallery-item">
+                    <div class="gallery-item" style="display:inline-block; width:300px; margin:10px; text-align:center; vertical-align: top;">
+        <img src="Amna portfolio/baking/IMG_4148.jpg" style="width:100%; height:200px; object-fit:cover; border-radius:15px;">
+        <p><strong>Baking</strong><br>Freshly Baked Éclairs</p>
+    </div>
+
+    <div class="gallery-item" style="display:inline-block; width:300px; margin:10px; text-align:center; vertical-align: top;">
+        <img src="Amna portfolio/baking/tart.jpg" style="width:100%; height:200px; object-fit:cover; border-radius:15px;">
+        <p><strong>Baking</strong><br>Pastry Practice</p>
+    </div>
+
+    <div class="gallery-item" style="display:inline-block; width:300px; margin:10px; text-align:center; vertical-align: top;">
+        <img src="Amna portfolio/baking/IMG_9711.JPG" style="width:100%; height:200px; object-fit:cover; border-radius:15px;">
+        <p><strong>Baking</strong><br>Decoration Details</p>
+    </div>
+
+    <div class="gallery-item" style="display:inline-block; width:300px; margin:10px; text-align:center; vertical-align: top;">
+        <img src="Amna portfolio/cooking/IMG_4577.jpg" style="width:100%; height:200px; object-fit:cover; border-radius:15px;">
+        <p><strong>Cooking</strong><br>Main Course</p>
+    </div>
+
+    <div class="gallery-item" style="display:inline-block; width:300px; margin:10px; text-align:center; vertical-align: top;">
+        <img src="Amna portfolio/cooking/IMG_4574.jpg" style="width:100%; height:200px; object-fit:cover; border-radius:15px;">
+        <p><strong>Cooking</strong><br>Fresh Ingredients</p>
+    </div>
+
+    <div class="gallery-item" style="display:inline-block; width:300px; margin:10px; text-align:center; vertical-align: top;">
+        <img src="Amna portfolio/cooking/IMG_4576.jpg" style="width:100%; height:200px; object-fit:cover; border-radius:15px;">
+        <p><strong>Cooking</strong><br>Final Plating</p>
+    </div>
+
+    </section>
+<footer style="background: #ffffff; padding: 60px 0; text-align: center; border-top: 1px solid #FFF0F5; margin-top: 80px; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    
+    <h3 style="color: #DB7093; margin: 0; font-family: 'Segoe UI', sans-serif;">Amna Bin Rasheed</h3>
+    <p style="color: #888; font-size: 0.9rem; margin: 10px 0;">&copy; 2026 IT Multimedia Portfolio | University of Sharjah</p>
+    
+    <div style="margin-top: 20px; display: flex; gap: 30px;">
+        <a href="https://www.instagram.com/_amnabr/" target="_blank" style="color: #BDB76B; text-decoration: none; font-weight: bold; font-size: 0.8rem; text-transform: uppercase;">Instagram</a>
+        <a href="mailto:amnabinrrasheed@gmail.com" style="color: #BDB76B; text-decoration: none; font-weight: bold; font-size: 0.8rem; text-transform: uppercase;">Email</a>
+        <a href="https://www.linkedin.com/in/amna-bin-rasheed-186a103bb/" target="_blank" style="color: #BDB76B; text-decoration: none; font-weight: bold; font-size: 0.8rem; text-transform: uppercase;">LinkedIn</a>
+    </div>
+    
+</footer>
+	
+<script>
+    function readBio() {
+        // This finds your bio text and reads it out loud
+        const text = document.getElementById("bio-text").innerText;
+        const speech = new SpeechSynthesisUtterance(text);
+        speech.lang = 'en-US';
+        window.speechSynthesis.speak(speech);
+    }
+</script>
+
+
+</body>
+</html>

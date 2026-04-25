@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Marwa AlShamsi Portfolio</title>
+<link href="Styles.css" rel="stylesheet" type="text/css">
+
+<style>
+
+/* GENERAL PAGE */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: white;
+}
+
+/* HEADER BLACK + CENTERED */
+header {
+    background-color: black;
+}
+
+.navbar {
+    padding: 30px 20px;
+    text-align: center;
+}
+
+/* Logo */
+.logo {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+/* Nav links centered */
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 0;
+    margin: 10px 0;
+}
+
+/* Nav links white */
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #cccccc;
+}
+
+/* Read/Stop buttons */
+.reader-buttons {
+    margin-top: 15px;
+}
+
+.reader-buttons button {
+    padding: 8px 15px;
+    margin: 0 5px;
+    border: none;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.reader-buttons button:hover {
+    background-color: #ddd;
+}
+
+/* SECTION SEPARATORS */
+.intro,
+.aboutme,
+.MySkills,
+.MyWork,
+.Video,
+footer {
+    padding: 60px 20px;
+    text-align: center;
+    border-top: 6px solid black;
+}
+
+/* Remove top border from first section */
+.intro {
+    border-top: none;
+}
+
+/* Images bigger */
+img {
+    width: 500px;
+    max-width: 95%;
+    border-radius: 10px;
+    margin: 30px 0;
+}
+
+/* Video untouched structurally */
+video {
+    width: 500px;
+    max-width: 95%;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+/* Skills list */
+.MySkills ul {
+    list-style: none;
+    padding: 0;
+}
+
+.MySkills li {
+    padding: 8px 0;
+    font-weight: 500;
+}
+
+/* CV Button */
+.cv-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    margin-top: 15px;
+}
+
+.cv-button:hover {
+    background-color: #333;
+}
+
+/* Footer */
+footer {
+    background-color: #f4f4f4;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+<nav class="navbar" aria-label="Main Navigation">
+
+<div class="logo">
+Marwa Alshamsi | Portfolio
+</div>
+
+<ul class="nav-links">
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">My Skills</a></li>
+<li><a href="#work">My Work</a></li>
+<li><a href="#video">Video</a></li>
+</ul>
+
+<div class="reader-buttons">
+<button onclick="readPage()">🔊 Read Page</button>
+<button onclick="stopReading()">⏹ Stop</button>
+</div>
+
+</nav>
+</header>
+
+
+<div class="intro" id="home">
+<h2>Hello</h2>
+<h1>I'm Marwa Alshamsi</h1>
+<h1>Strategic Communication and Advertising Student</h1>
+
+<img src="MarwaPhoto.jpeg" alt="Photo of Marwa Alshamsi">
+
+<p></p>
+
+<a href="MarwaCV.pdf" download class="cv-button">
+Download CV
+</a>
+</div>
+
+
+<div class="aboutme" id="about">
+<h2>About Me</h2>
+<p>
+My name is Marwa Humaid Alshamsi and I am a student at the
+University of Sharjah majoring in Strategic Communication and
+Advertising. I am passionate about how communication influences
+people, shapes ideas, and builds strong connections between brands
+and audiences. I enjoy learning about media, branding, and creative
+campaign development. In the future I hope to build a career in
+advertising and strategic communication.
+</p>
+</div>
+
+
+<div class="MySkills" id="skills">
+<h2>My Skills</h2>
+<ul>
+<li>Content Creation</li>
+<li>Social Media Management</li>
+<li>Basic Graphic Design</li>
+<li>Communication Skills</li>
+</ul>
+</div>
+
+
+<div class="MyWork" id="work">
+<h2>My Work</h2>
+<p>Here are some of the projects I created during my course:</p>
+
+<p>
+<img src="image1.jpeg" alt="Screenshot of project one">
+</p>
+
+<p>
+<img src="image2.jpeg" alt="Screenshot of project two">
+</p>
+</div>
+
+
+<div class="Video" id="video">
+<h2>Video Introduction</h2>
+
+<video controls>
+<source src="Marwa-intro-video.mp4" type="video/mp4">
+</video>
+
+<p>
+This video introduces my portfolio and academic work.
+</p>
+</div>
+
+
+<script>
+function readPage() {
+    let text = document.body.innerText;
+    let speech = new SpeechSynthesisUtterance(text);
+    speech.lang = "en-US";
+    speech.rate = 1;
+    speech.pitch = 1;
+    window.speechSynthesis.cancel();
+    window.speechSynthesis.speak(speech);
+}
+
+function stopReading() {
+    window.speechSynthesis.cancel();
+}
+</script>
+
+
+<footer>
+<div class="Contact">
+<h2>Contact Me</h2>
+
+<p>Email:
+<a href="mailto:U23100652@sharjah.ac.ae">
+U23100652@sharjah.ac.ae
+</a>
+</p>
+
+<p>
+Instagram:
+<a href="https://instagram.com/mrwaalshamsi_">
+@mrwaalshamsi_
+</a>
+</p>
+
+<p>
+© 2026 Marwa Alshamsi.
+All content on this website, including projects, video production, and source code,
+was created by Marwa Alshamsi for academic purposes.
+
+University of Sharjah.
+</p>
+
+</div>
+</footer>
+
+</body>
+</html>

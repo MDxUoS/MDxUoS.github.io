@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>About me</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div id="container">
+  <div id="header">
+    <h1>About me</h1>
+
+    <div id="navigation">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#intro">Introduction</a></li>
+        <li><a href="#edu">Education</a></li>
+        <li><a href="#hobby">Hobbies</a></li>
+        <li><a href="#contact">Contact me</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="banner">
+    <!-- FIXED ID (no spaces) -->
+    <div id="main-content">
+
+      <img src="WhatsApp Image 2026-04-23 at 2.43.05 PM-fotor-202604231502.png" width="150" height="150" alt=""/>
+
+      <!-- INTRO -->
+      <h3 id="intro">&nbsp; Introduction</h3>
+      <button onclick="readText(this.nextElementSibling.innerText)">🔊 Read</button>
+      <p>
+        Hey there :) I'm Ruaa Odeh, a first year student at the University of Sharjah and I'm majoring in Information Technology - Multimedia. This is my self introduction page for my Interactive Multimedia course final project.
+      </p>
+
+      <video controls>
+        <source src="WhatsApp Video 2026-04-23 at 2.40.50 PM.mp4" type="video/mp4">
+      </video>
+
+      <!-- EDUCATION -->
+      <h3 id="edu">&nbsp; Education</h3>
+      <button onclick="readText(this.nextElementSibling.innerText)">🔊 Read</button>
+      <p>
+        I studied in the British curriculum in highschool at GEMS Westminster School Sharjah (WSS) and graduated with 2 A's in Computer Science and Physics. I often also worked as a teaching assistant during my free time, and I won two first place awards for the school's chess and photography competitions.
+      </p>
+
+      <!-- HOBBIES -->
+      <h3 id="hobby">&nbsp; Hobbies</h3>
+      <button onclick="readText(this.nextElementSibling.innerText)">🔊 Read</button>
+      <p>
+        My hobbies include reading books and playing video games. Sometimes I also watch anime. I enjoy analyzing stories and creating theories about different media.
+      </p>
+
+      <!-- CONTACT -->
+      <h3 id="contact">&nbsp; Contact me</h3>
+      <button onclick="readText('You can contact me via email: theruaarium3000@gmail.com')">🔊 Read</button>
+      <p>
+        Email: <a href="mailto:theruaarium3000@gmail.com">theruaarium3000@gmail.com</a>
+      </p>
+
+    </div>
+  </div>
+
+  <div id="sidebar"></div>
+  <div id="footer"></div>
+
+</div>
+
+<!-- TEXT TO SPEECH SCRIPT -->
+<script>
+function readText(text) {
+    const speech = new SpeechSynthesisUtterance(text);
+    speech.rate = 1;
+    speech.pitch = 1;
+    speech.lang = "en-US";
+    window.speechSynthesis.cancel();
+    window.speechSynthesis.speak(speech);
+}
+</script>
+
+</body>
+</html>
