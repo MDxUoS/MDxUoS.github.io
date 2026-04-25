@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About Me | Ruaa Odeh</title>
+
+<link rel="stylesheet" href="styles.css">
+
+<!-- FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="header">
+  <h1>Ruaa Odeh</h1>
+  <p class="subtitle">IT Multimedia Student</p>
+
+  <nav>
+	<a href="#">Home</a>
+    <a href="#intro">Introduction</a>
+    <a href="#education">Education</a>
+    <a href="#hobbies">Hobbies</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- SINGLE MAIN SECTION -->
+  <section class="main-section">
+
+    <!-- PROFILE -->
+    <div class="profile fade-in">
+      <img src="51B2ADB9-1D90-42A1-8ED6-DC3E0E6F1B00.jpg" alt="Ruaa Odeh">
+    </div>
+
+    
+
+    <!-- EDUCATION -->
+    <div id="education" class="card fade-in">
+      <h2>Education</h2>
+      <button onclick="readText(this.nextElementSibling.innerText)">🔊 Listen</button>
+      <p>
+        I studied under the British curriculum at GEMS Westminster School Sharjah.
+        I graduated with A grades in Computer Science and Physics. During my time
+        there, I also worked as a teaching assistant and won first place awards
+        in both chess and photography competitions.
+      </p>
+    </div>
+	  
+	  <!-- INTRO -->
+    <div id="intro" class="card fade-in">
+      <h2>Introduction</h2>
+      <button onclick="readText(this.nextElementSibling.innerText)">🔊 Listen</button>
+      <p>
+        Hello, my name is Ruaa Odeh. I am a first-year student at the University
+        of Sharjah majoring in Information Technology with a focus on Multimedia.
+        This website was created as part of my Interactive Multimedia course project.
+      </p>
+
+      <video controls>
+        <source src="WhatsApp Video 2026-04-23 at 2.40.50 PM 2.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <!-- HOBBIES -->
+    <div id="hobbies" class="card fade-in">
+      <h2>Hobbies</h2>
+      <button onclick="readText(this.nextElementSibling.innerText)">🔊 Listen</button>
+      <p>
+        My hobbies include reading books, playing video games, and watching anime.
+        I especially enjoy analyzing stories and creating theories about different media.
+      </p>
+    </div>
+
+    <!-- CONTACT -->
+    <div id="contact" class="card fade-in contact">
+      <h2>Contact</h2>
+      <button onclick="readText('You can contact me via email: theruaarium3000@gmail.com')">🔊 Listen</button>
+      <p>
+        Email:
+        <a href="mailto:theruaarium3000@gmail.com">
+          theruaarium3000@gmail.com
+        </a>
+      </p>
+    </div>
+
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2026 Ruaa Odeh</p>
+</footer>
+
+<!-- SCRIPT -->
+<script>
+function readText(text) {
+    const speech = new SpeechSynthesisUtterance(text);
+    speech.lang = "en-US";
+    window.speechSynthesis.cancel();
+    window.speechSynthesis.speak(speech);
+}
+
+/* SCROLL ANIMATION */
+const elements = document.querySelectorAll(".fade-in");
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
+});
+
+elements.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
